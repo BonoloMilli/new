@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Facilities Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+        /* --- Custom Theme Colors to match the image --- */
+        :root {
+            --brand-dark: #0a1f44;  /* Deep Navy */
+            --brand-blue: #0d2e6a;  /* Primary Blue */
+            --brand-cyan: #00aaff;  /* Bright Cyan/Blue */
+            --brand-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            color: #333;
+        }
+
+        /* Overrides */
+        .text-brand-blue { color: var(--brand-blue); }
+        .text-brand-cyan { color: var(--brand-cyan); }
+        .bg-brand-dark { background-color: var(--brand-dark); }
+        
+        .btn-brand-primary {
+            background-color: var(--brand-blue);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+        }
+        .btn-brand-primary:hover { background-color: #081d45; color: #fff; }
+
+        .btn-brand-cyan {
+            background-color: var(--brand-cyan);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+        }
+        .btn-brand-cyan:hover { background-color: #008ecc; color: #fff; }
+
+        .btn-outline-light-custom {
+            border: 2px solid white;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+        }
+        .btn-outline-light-custom:hover { background-color: white; color: var(--brand-blue); }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.866), rgba(255, 255, 255, 0)), url('/assets/images/image1.png');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Stats in Intro */
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--brand-cyan);
+        }
+
+        /* Cards */
+        .service-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        /* Sector Overlay Cards */
+        .sector-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+        }
+        .sector-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .sector-card:hover img { transform: scale(1.05); }
+        .sector-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: white;
+        }
+
+        /* Bottom CTA */
+        .cta-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url('/assets/images/quote-1.png');
+            background-size: cover;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .logo{
+            width: 70px;
+        }
+
+        .new-btn{
+            background-color: #00B4D8;
+            color: white;
+        }
+
+        .bg-primary{
+            background-color: #0d2e6a !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white py-3 sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-brand-blue" href="#">
+                <img src="assets/images/logo.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav me-4 gap-3 fw-medium">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-brand-primary">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-3 fw-semibold mb-4 text-black">Professional Facilities & Project Management Solutions</h1>
+                    <p class="mb-5 text-black w-75 mx-auto">Delivering world-class property management services to the public and private sectors across the Eastern Cape Province and beyond</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" class="btn btn-brand-primary btn-lg">Our Services</a>
+                        <a href="#" class="btn new-btn btn-lg rounded-pill px-4">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-4 border-bottom">
+        <div class="container">
+            <div class="row justify-content-center align-items-center text-center grayscale">
+                <div class="col-6 col-md-3 mb-3 mb-md-0"><img src="assets/images/1.png" class="img-fluid" alt="ISO"></div>
+                <div class="col-6 col-md-3 mb-3 mb-md-0"><img src="assets/images/2.png" class="img-fluid" alt="SABS"></div>
+                <div class="col-6 col-md-3 mb-3 mb-md-0"><img src="assets/images/1.png" class="img-fluid" alt="CIDB"></div>
+                <div class="col-6 col-md-3 mb-3 mb-md-0"><img src="assets/images/3.png" class="img-fluid" alt="Partner"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 section-padding">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 me-3">
+                            <div class="bg-primary p-3 rounded">
+                                <i class="bi bi-briefcase fs-3 text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">Comprehensive Services</h5>
+                            <p class="text-muted small">By allowing SL Man to undertake the complete management of your property, you will ensure that every aspect of the care and management of it is cared for by a professional, knowledgeable group of specialists.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 me-3">
+                            <div class="bg-primary p-3 rounded">
+                                <i class="bi bi-award fs-3 text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">Quality Certified</h5>
+                            <p class="text-muted small">ISO 9001:2015 certified for our Quality Management System. BBBEE Level 2 contributor with full CIDB and NHBRC registration.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
+                            <div class="bg-primary p-3 rounded">
+                                <i class="bi bi-people fs-3 text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">One-Stop Resource</h5>
+                            <p class="text-muted small">SL Man connects the supply and demand sides of every aspect of property management and care; coordinating all of the required support services.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <small class="text-brand-cyan fw-bold text-uppercase">Who We Are</small>
+                    <h2 class="fw-bold mb-4 text-brand-blue display-6">Expert Management Solutions</h2>
+                    <p class="text-muted mb-4">SL Man is a facilities and project management company that boasts almost a century of combined experience in the overall management of properties; large and small, residential and commercial.</p>
+                    <p class="text-muted mb-5">The team has a wide variety of expertise and areas of speciality, enabling SL Man to provide an all-encompassing service to our clients.</p>
+                    
+                    <div class="row mb-5">
+                        <div class="col-4">
+                            <div class="stat-number">15+ <span class="fs-6 text-dark fw-normal">Years</span></div>
+                            <small class="text-muted">Business</small>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-number">100+ <span class="fs-6 text-dark fw-normal">Projects</span></div>
+                            <small class="text-muted">Successfully Delivered</small>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-number">Lvl 2 <span class="fs-6 text-dark fw-normal">B-BBEE</span></div>
+                            <small class="text-muted">Certified Contributor</small>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-brand-cyan">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <small class="text-brand-cyan fw-bold text-uppercase">What We Do</small>
+                    <h2 class="fw-bold text-brand-blue">Comprehensive Management Solutions</h2>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 service-card bg-transparent">
+                        <img src="assets/images/management-1.png" class="card-img-top" alt="Facilities">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Facilities Management</h5>
+                            <p class="card-text text-muted">Integrated soft and hard services, maintenance planning, and general upkeep ensuring optimal environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 service-card bg-transparent">
+                        <img src="assets/images/management-2.png" class="card-img-top" alt="Project">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Project Management</h5>
+                            <p class="card-text text-muted">End-to-end project control, schedule management, and budget development for builds of all sizes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 service-card bg-transparent">
+                        <img src="assets/images/management-3.png" class="card-img-top" alt="Construction">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Construction Services</h5>
+                            <p class="card-text text-muted">Civil works, building, and renovations delivered with precision and safety compliance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 service-card bg-transparent">
+                        <img src="assets/images/management-4.png" class="card-img-top" alt="Telecoms">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Telecommunications</h5>
+                            <p class="card-text text-muted">Infrastructure setup, tower maintenance, and network support services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <img src="assets/images/choose-1.png" class="img-fluid rounded shadow" alt="Meeting">
+                </div>
+                <div class="col-lg-7">
+                    <small class="text-brand-cyan fw-bold text-uppercase">Why Choose Us</small>
+                    <h2 class="fw-bold text-brand-blue mb-4">Where Expertise Meets Reliability</h2>
+                    <p class="text-muted mb-4">Our commitment to excellence is grounded in years of industry experience. We don't just manage facilities; we enhance them to improve your operational output.</p>
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-brand-cyan me-2"></i> <span>Cost-effective solutions</span>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-brand-cyan me-2"></i> <span>Turnkey projects</span>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-brand-cyan me-2"></i> <span>Certified compliance</span>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-brand-cyan me-2"></i> <span>24/7 Support</span>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-brand-cyan me-2"></i> <span>Skilled Team</span>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-brand-cyan me-2"></i> <span>Safety First</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-brand-cyan">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <small class="text-brand-cyan fw-bold text-uppercase">Services</small>
+                    <h2 class="fw-bold text-brand-blue mb-5">Complete Property Solutions</h2>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-6">
+                            <div class="mb-2"><i class="bi bi-building bg-brand-dark text-white p-2 rounded"></i></div>
+                            <h6 class="fw-bold mt-3">Facilities Management</h6>
+                            <p class="small text-muted">Building condition assessments, cost planning, preventative maintenance strategies, asset management, and computerised management systems</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-2"><i class="bi bi-kanban bg-brand-dark text-white p-2 rounded"></i></div>
+                            <h6 class="fw-bold mt-3">Project Management</h6>
+                            <p class="small text-muted">Complete project oversight, strategic reporting, design supervision, feasibility studies, and contractor development programs</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-2"><i class="bi bi-bricks bg-brand-dark text-white p-2 rounded"></i></div>
+                            <h6 class="fw-bold mt-3">Construction</h6>
+                            <p class="small text-muted">Specialised in repairs and renovations, long-term maintenance, and day-to-day building services</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-2"><i class="bi bi-broadcast bg-brand-dark text-white p-2 rounded"></i></div>
+                            <h6 class="fw-bold mt-3">Telecommunications</h6>
+                            <p class="small text-muted">Civil engineering, telecoms, optic fibre installations, RAN site builds, and certified technical installations</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-brand-cyan">View All Services</a>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="assets/images/property-1.png" class="img-fluid rounded" style="object-fit: cover; height: 500px;" alt="Building">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light d-none">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <small class="text-brand-cyan fw-bold text-uppercase">Industries</small>
+                <h2 class="fw-bold text-brand-blue">Excellence Across Every Sector</h2>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="sector-card">
+                        <img src="https://placehold.co/400x300/555/fff?text=Government+Building" alt="Sector">
+                        <div class="sector-overlay">
+                            <h5 class="fw-bold mb-0">Federal & Government</h5>
+                            <small>Public Sector Services</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sector-card">
+                        <img src="https://placehold.co/400x300/666/fff?text=Laboratory" alt="Sector">
+                        <div class="sector-overlay">
+                            <h5 class="fw-bold mb-0">Healthcare & Pharma</h5>
+                            <small>Specialized Facilities</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sector-card">
+                        <img src="https://placehold.co/400x300/777/fff?text=Retail+Center" alt="Sector">
+                        <div class="sector-overlay">
+                            <h5 class="fw-bold mb-0">Retail & Commercial</h5>
+                            <small>Shopping Centers</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sector-card">
+                        <img src="https://placehold.co/400x300/888/fff?text=Infrastructure" alt="Sector">
+                        <div class="sector-overlay">
+                            <h5 class="fw-bold mb-0">Infrastructure</h5>
+                            <small>Civil Works</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sector-card">
+                        <img src="https://placehold.co/400x300/999/fff?text=Housing+Estate" alt="Sector">
+                        <div class="sector-overlay">
+                            <h5 class="fw-bold mb-0">Residential</h5>
+                            <small>Estates & Complexes</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sector-card">
+                        <img src="https://placehold.co/400x300/aaa/fff?text=Skyscraper" alt="Sector">
+                        <div class="sector-overlay">
+                            <h5 class="fw-bold mb-0">Corporate</h5>
+                            <small>Office Parks</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <small class="text-brand-cyan fw-bold text-uppercase">Start Your Project</small>
+                    <h2 class="fw-bold text-brand-blue mb-4">Get Professional Management Solutions Today</h2>
+                    <p class="text-dark mb-5">Contact our team to discuss your specific requirements and find out how we can assist you.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" class="btn btn-brand-primary">Contact Us</a>
+                        <a href="#" class="btn btn-brand-cyan">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12">
+                     <img src="https://placehold.co/1000x300/transparent/transparent?text=." class="img-fluid" alt=""> </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <img src="assets/images/logo.png" alt="Logo" class="mb-4">
+                    <p class="small opacity-75">Professional Facilities & Project Management Solutions. Building a better future through quality service and expertise.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-3">Company</h5>
+                    <ul class="list-unstyled small opacity-75">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Projects</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-3">Support</h5>
+                    <ul class="list-unstyled small opacity-75">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Subscribe</h5>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-brand-cyan" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-3">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <small class="opacity-50">&copy; 2023 Company Name. All Rights Reserved.</small>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <small class="opacity-50">Designed by Expert UI</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
